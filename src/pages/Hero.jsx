@@ -67,29 +67,29 @@ export const Hero = () => {
             href="https://www.linkedin.com/in/%C3%BE%C3%B3r%C3%B0ur-sk%C3%BAlason/"
             target={"_blank"}
             rel="noreferrer"
-            className="text-zinc-300 hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
+            className="text-zinc-300 text-[2rem] md:text-[3rem] hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
             onMouseOver={() => setHoverState(1)}
           >
-            <FaLinkedin size={"3rem"} />
+            <FaLinkedin />
           </a>
           <a
             href="https://github.com/DoddiSkula"
             target={"_blank"}
             rel="noreferrer"
-            className="text-zinc-300 hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
+            className="text-zinc-300 text-[2rem] md:text-[3rem] hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
             onMouseOver={() => setHoverState(2)}
           >
-            <FaGithub size={"3rem"} />
+            <FaGithub />
           </a>
 
           <a
             href="https://dribbble.com/ThordurS"
             target={"_blank"}
             rel="noreferrer"
-            className="text-zinc-300 hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
+            className="text-zinc-300 text-[2rem] md:text-[3rem] hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
             onMouseOver={() => setHoverState(3)}
           >
-            <FaDribbble size={"3rem"} />
+            <FaDribbble />
           </a>
         </div>
       </div>
