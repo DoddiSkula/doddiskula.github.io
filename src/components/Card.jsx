@@ -1,7 +1,7 @@
 export const ProjectCard = ({ project }) => {
   return (
     <a href={project.url} target="_blank" rel="noreferrer">
-      <div className="max-w-sm rounded-lg dark:hover:bg-primary hover:bg-zinc-200 ring-teal-500 dark:ring-indigo-400 focus:ring-1">
+      <div className="max-w-sm rounded-lg dark:hover:bg-primary hover:bg-gray-100 ring-teal-500 dark:ring-indigo-400 focus:ring-1">
         <div class="p-5">
           <h5 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
             {project.title}
@@ -10,7 +10,7 @@ export const ProjectCard = ({ project }) => {
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {project.description}
           </p>
-          <div class="inline-flex items-center  py-2 text-sm font-medium text-center text-emerald-600 dark:text-indigo-400">
+          <div class="inline-flex items-center  py-2 text-sm font-medium text-center text-teal-600 dark:text-indigo-400">
             View more
             <svg
               aria-hidden="true"

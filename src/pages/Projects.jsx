@@ -39,8 +39,8 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <div className="h-fit max-w-7xl mx-auto p-10">
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="h-fit max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 ">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
