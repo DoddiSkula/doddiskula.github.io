@@ -1,6 +1,6 @@
 import { Layout } from "components/Layout";
 import { ThemeProvider } from "contexts/ThemeContext";
-import { Header } from "pages/Header";
+import { Hero } from "pages/Hero";
 import { Projects } from "pages/Projects";
 
 const AppWrapper = () => {
@@ -14,7 +14,7 @@ const AppWrapper = () => {
 export const App = () => {
   return (
     <Layout>
-      <Header />
+      <Hero />
       <Projects />
     </Layout>
   );
