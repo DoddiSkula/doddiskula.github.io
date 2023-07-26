@@ -1,97 +1,66 @@
-import { FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDribbble, FaEnvelope } from "react-icons/fa";
+import { BsGridFill } from "react-icons/bs";
 import MemojiSmile from "assets/smile.png";
 import MemojiWink from "assets/wink.png";
 import MemojiThumbsup from "assets/thumbsup.png";
 import MemojiLaptop from "assets/laptop.png";
 import { useState } from "react";
+import { NameWidget } from "components/Widgets/Name";
+import { SocialWidget } from "components/Widgets/Social";
+import { Projects } from "./Projects";
+import { LocationWidget } from "components/Widgets/Location";
 
 export const Hero = () => {
-  const [hoverState, setHoverState] = useState(0);
-
-  const getMemoji = () => {
-    switch (hoverState) {
-      case 0:
-        return MemojiSmile;
-      case 1:
-        return MemojiThumbsup;
-      case 2:
-        return MemojiLaptop;
-      case 3:
-        return MemojiWink;
-      default:
-        return MemojiSmile;
-    }
-  };
+  const [memoji, setMemoji] = useState(MemojiSmile);
 
   return (
-    <div className="h-screen w-full">
-      <div className="h-full max-w-7xl mx-auto flex flex-col justify-center items-center">
-        <div className="transition-all w-28 xl:w-56 lg:w-48 md:w-44 cursor-pointer hover:scale-105">
-          <img
-            src={getMemoji()}
-            width={"100%"}
-            alt="avatar"
-            onMouseOver={() => setHoverState(0)}
+    <div className="max-w-5xl mx-auto">
+      <div className="grid grid-rows-auto grid-flow-col gap-6 mb-24">
+        <div className="row-span-3">
+          <NameWidget emoji={memoji} onHover={() => setMemoji(MemojiSmile)} />
+        </div>
+
+        <div className="col-span-2 flex gap-4 h-fit">
+          <SocialWidget
+            icon={<FaLinkedin />}
+            url={
+              "https://www.linkedin.com/in/%C3%BE%C3%B3r%C3%B0ur-sk%C3%BAlason/"
+            }
+            onHover={() => setMemoji(MemojiThumbsup)}
+          />
+          <SocialWidget
+            icon={<FaGithub />}
+            url={"https://github.com/DoddiSkula"}
+            onHover={() => setMemoji(MemojiLaptop)}
+          />
+          <SocialWidget
+            icon={<FaDribbble />}
+            url={"https://dribbble.com/ThordurS"}
+            onHover={() => setMemoji(MemojiWink)}
+          />
+          <SocialWidget
+            icon={<FaEnvelope />}
+            url={"mailto: doddiskula@gmail.com"}
+            mailTo
+            onHover={() => setMemoji(MemojiSmile)}
           />
         </div>
-
-        <h1 className="transition-all font-display dark:text-secondary 2xl:text-[7rem] xl:text-[6rem] lg:text-[5rem] md:text-[4rem] text-[3rem] bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-teal-400 dark:text-transparent dark:bg-gradient-to-r dark:from-indigo-500 dark:to-indigo-400">
-          Þórður Skúlason
-        </h1>
-        <h2 className="font-medium text-zinc-300 dark:text-secondary  lg:text-[1.5rem] md:text-[1.3rem] text-[0.9rem] mb-8 tracking-wider">
-          <span className="text-zinc-200 dark:text-slate-800">{"< "}</span>
-          <span
-            className={
-              hoverState === 1 || hoverState === 2
-                ? "text-zinc-600 dark:text-zinc-300 decoration-slice underline dark:decoration-indigo-400 decoration-teal-600"
-                : ""
-            }
-          >
-            Front-end developer
-          </span>
-          <span>{" & "}</span>
-          <span
-            className={
-              hoverState === 1 || hoverState === 3
-                ? "text-zinc-600 dark:text-zinc-300 decoration-slice underline dark:decoration-indigo-400 decoration-teal-600"
-                : ""
-            }
-          >
-            UI/UX designer
-          </span>
-          <span className="text-zinc-200 dark:text-slate-800">{" />"}</span>
-        </h2>
-
-        <div className="flex gap-6">
-          <a
-            href="https://www.linkedin.com/in/%C3%BE%C3%B3r%C3%B0ur-sk%C3%BAlason/"
-            target={"_blank"}
-            rel="noreferrer"
-            className="text-zinc-300 text-[2rem] md:text-[3rem] hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
-            onMouseOver={() => setHoverState(1)}
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/DoddiSkula"
-            target={"_blank"}
-            rel="noreferrer"
-            className="text-zinc-300 text-[2rem] md:text-[3rem] hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
-            onMouseOver={() => setHoverState(2)}
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://dribbble.com/ThordurS"
-            target={"_blank"}
-            rel="noreferrer"
-            className="text-zinc-300 text-[2rem] md:text-[3rem] hover:text-zinc-600 dark:text-secondary dark:hover:text-zinc-300  hover:scale-110 transition-all"
-            onMouseOver={() => setHoverState(3)}
-          >
-            <FaDribbble />
-          </a>
+        <div className="row-span-2 col-span-2">
+          <LocationWidget />
         </div>
+      </div>
+      <div className="flex items-center justify-center gap-4 mb-10">
+        <div className="text-3xl text-gray-400 dark:text-neutral-600">
+          <BsGridFill />
+        </div>
+
+        <h2 className="text-center text-gray-800 dark:text-neutral-200 font-semibold text-4xl">
+          Project Showcase
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-2 gap-6">
+        <Projects />
       </div>
     </div>
   );

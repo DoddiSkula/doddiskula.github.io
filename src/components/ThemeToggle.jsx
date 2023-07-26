@@ -12,7 +12,7 @@ export const ThemeToggle = () => {
     >
       <div>
         <button
-          className="text-slate-300 dark:text-slate-600 hover:bg-gray-200 hover:text-indigo-500 dark:hover:bg-primary dark:hover:text-amber-500 rounded-full p-4 transition-all duration-300"
+          className="text-slate-300 dark:text-slate-600 hover:bg-gray-300 hover:text-indigo-500 dark:hover:bg-neutral-800 dark:hover:text-amber-500 rounded-full p-4 transition-all duration-300"
           onClick={() => setDarkMode((prev) => !prev)}
         >
           {!darkMode && <Moon height="26px" width="26px" />}

@@ -4,7 +4,7 @@ export const Layout = ({ children }) => {
   return (
     <div
       id="layout"
-      className="bg-zinc-50 dark:bg-background h-screen overflow-y-auto scrollbar dark:scrollbar-dark transition-all duration-300"
+      className="bg-gray-200 dark:bg-neutral-900 h-screen p-20 overflow-y-auto scrollbar dark:scrollbar-dark transition-all duration-300"
     >
       <ThemeToggle />
       <div>

@@ -29,14 +29,11 @@
   }
 
   .scrollbar-dark::-webkit-scrollbar-thumb {
-    background: #1e2427;
+    background: #262626;
     border-radius: 1rem;
   }
 
   .scrollbar-dark::-webkit-scrollbar-thumb:hover {
-    background: #1e2427;
+    background: #262626;
   }
-}
-
-.hero-bg {
 }
