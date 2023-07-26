@@ -15,12 +15,12 @@ export const Hero = () => {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="grid grid-rows-auto grid-flow-col gap-6 mb-24">
-        <div className="row-span-3">
+      <div className="space-y-8 md:space-y-0 md:grid md:grid-rows-auto md:grid-flow-col gap-6 mb-12 md:mb-24">
+        <div className="md:row-span-3">
           <NameWidget emoji={memoji} onHover={() => setMemoji(MemojiSmile)} />
         </div>
 
-        <div className="col-span-2 flex gap-4 h-fit">
+        <div className="md:col-span-2 flex gap-4 overflow-x-auto md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-4">
           <SocialWidget
             icon={<FaLinkedin />}
             url={
@@ -45,21 +45,19 @@ export const Hero = () => {
             onHover={() => setMemoji(MemojiSmile)}
           />
         </div>
-        <div className="row-span-2 col-span-2">
+        <div className="md:row-span-2 md:col-span-2">
           <LocationWidget />
         </div>
       </div>
       <div className="flex items-center justify-center gap-4 mb-10">
-        <div className="text-3xl text-gray-400 dark:text-neutral-600">
+        <div className="text-xl md:text-3xl text-gray-400 dark:text-neutral-600">
           <BsGridFill />
         </div>
-
-        <h2 className="text-center text-gray-800 dark:text-neutral-200 font-semibold text-4xl">
+        <h2 className="text-center text-gray-800 dark:text-neutral-200 font-semibold text-2xl md:text-4xl">
           Project Showcase
         </h2>
       </div>
-
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Projects />
       </div>
     </div>

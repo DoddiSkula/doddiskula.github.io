@@ -8,7 +8,9 @@ export const SocialWidget = ({ icon, url, onHover }) => {
       rel="noreferrer"
       className="text-gray-400 text-5xl hover:text-indigo-500 dark:text-neutral-600 dark:hover:text-indigo-400 hover:scale-110 transition-all"
     >
-      <Card onMouseOver={onHover}>{icon}</Card>
+      <Card onMouseOver={onHover}>
+        <div className="flex justify-center items-center">{icon}</div>
+      </Card>
     </a>
   );
 };

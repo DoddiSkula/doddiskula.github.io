@@ -36,7 +36,7 @@ export const Card = ({ children, ...props }) => {
   return (
     <div
       {...props}
-      className="group w-full h-full bg-white hover:bg-gray-100 dark:bg-[#1f1f1f] dark:hover:bg-neutral-800 dark:hover:border-neutral-700 transition-all cursor-pointer duration-300 p-10 border shadow-lg dark:shadow-md dark:border-[#313131] rounded-3xl"
+      className="group overflow-hidden w-full h-full bg-white hover:bg-gray-100 dark:bg-[#1f1f1f] dark:hover:bg-neutral-800 dark:hover:border-neutral-700 transition-all cursor-pointer duration-300 p-10 border shadow-lg dark:shadow-md dark:border-[#313131] rounded-3xl"
     >
       {children}
     </div>
