@@ -3,7 +3,7 @@ import { Card } from "components/Card";
 export const NameWidget = ({ emoji, onHover }) => {
   return (
     <Card onMouseOver={onHover}>
-      <div className="group">
+      <div className="group p-10">
         <div className="transition-all bg-neutral-800 group-hover:bg-neutral-700 p-2 rounded-full duration-500 w-32 cursor-pointer group-hover:scale-105 mb-5">
           <img src={emoji} width={"100%"} alt="avatar" />
         </div>

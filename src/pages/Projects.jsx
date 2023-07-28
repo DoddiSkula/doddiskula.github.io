@@ -1,39 +1,33 @@
 import { ProjectCard } from "components/Card";
+import Kynfraedslukistan from "assets/projects/kynfraedslukistan.png";
+import Pacman from "assets/projects/pacman.png";
+import Sorting from "assets/projects/sorting.png";
+import Smiley from "assets/projects/smiley.png";
 
 const projects = [
   {
-    title: "Hidden Traitor",
-    description:
-      "Hidden Traitor is an online multiplayer game where players work together to expose the traitor.",
-    url: "https://github.com/DoddiSkula/hidden-traitor",
+    title: "Kynfræðslukistan",
+    description: "Sex Education website for teenagers and teachers.",
+    url: "https://kynfraedslukistan.vercel.app/",
+    image: Kynfraedslukistan,
   },
   {
     title: "3D Pac man",
-    description: "The classic arcade game remade in 3D with Three.js.",
-    url: "https://github.com/DoddiSkula/3d-pac-man",
+    description: "The classic arcade game remade in 3D.",
+    url: "https://doddiskula.github.io/3d-pac-man/",
+    image: Pacman,
   },
   {
-    title: "Kynfræðslukistan",
-    description: "Sex Education website for teenagers and teachers.",
-    url: "https://github.com/DoddiSkula/Kynfraedslukistan",
+    title: "SmileyCoin Chrome Extension",
+    description: "Currency converter and cryptocurrency prices.",
+    url: "https://chrome.google.com/webstore/detail/smileycoin/ogdildbdenfonlkllgebljaodbiijkfh?utm_source=chrome-ntp-icon",
+    image: Smiley,
   },
   {
     title: "Sorting Visualizer",
-    description: "Tool for visualizing how different sorting algorithms work.",
-    url: "https://github.com/DoddiSkula/sorting-visualizer",
-  },
-
-  {
-    title: "Weather Map",
-    description:
-      "A simple interactive map of the world showing live weather in cities around the world.",
-    url: "https://github.com/DoddiSkula/weather-map",
-  },
-  {
-    title: "SmileyCoin Chrome extension",
-    description:
-      "Includes a currency converter, cryptocurrency prices, and more.",
-    url: "https://github.com/DoddiSkula/smileycoin-chrome-extension",
+    description: "Visualization tool for sorting algorithms.",
+    url: "https://doddiskula.github.io/sorting-visualizer/",
+    image: Sorting,
   },
 ];
 

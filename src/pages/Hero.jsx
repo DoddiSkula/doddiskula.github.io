@@ -14,7 +14,7 @@ export const Hero = () => {
   const [memoji, setMemoji] = useState(MemojiSmile);
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto mb-10">
       <div className="space-y-8 md:space-y-0 md:grid md:grid-rows-auto md:grid-flow-col gap-6 mb-12 md:mb-24">
         <div className="md:row-span-3">
           <NameWidget emoji={memoji} onHover={() => setMemoji(MemojiSmile)} />
@@ -41,7 +41,6 @@ export const Hero = () => {
           <SocialWidget
             icon={<FaEnvelope />}
             url={"mailto: doddiskula@gmail.com"}
-            mailTo
             onHover={() => setMemoji(MemojiSmile)}
           />
         </div>

@@ -11,7 +11,7 @@ export const LocationWidget = () => {
       rel="noreferrer"
     >
       <Card>
-        <div className="group flex gap-8 items-center justify-between">
+        <div className="p-10 group flex gap-8 items-center justify-between">
           <div>
             <h3 className="transition-all font-medium text-gray-500 dark:text-neutral-500 text-xl mb-4">
               Based In

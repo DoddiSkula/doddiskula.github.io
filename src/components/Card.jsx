@@ -1,34 +1,37 @@
+import { FaArrowRight } from "react-icons/fa";
+
 export const ProjectCard = ({ project }) => {
   return (
-    <a href={project.url} target="_blank" rel="noreferrer" className="w-full">
-      <Card>
-        <div>
-          <h5 class="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
-            {project.title}
-          </h5>
+    <Card>
+      <a href={project.url} target="_blank" rel="noreferrer" className="">
+        <div className="group p-4">
+          <div className="px-3 pt-3 mb-4">
+            <div className="flex justify-between items-center mb-1">
+              <h5 class="text-xl font-semibold text-gray-900 dark:text-white">
+                {project.title}
+              </h5>
+              <FaArrowRight className="-translate-x-3 text-lg group-hover:translate-x-0 group-hover:scale-110 duration-500 transform transition-all text-indigo-500 dark:text-indigo-400" />
+            </div>
 
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {project.description}
-          </p>
-          <div class="inline-flex items-center  py-2 text-sm font-medium text-center text-indigo-500 dark:text-indigo-400">
-            View more
-            <svg
-              aria-hidden="true"
-              class="w-4 h-4 ml-2 -mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              {project.description}
+            </p>
           </div>
+
+          {project.image && (
+            <div
+              className={`rounded-2xl bg-gradient-to-t from-purple-400 to-indigo-400 w-full h-48 sm:h-72 px-5 pt-6 flex justify-center items-baseline overflow-hidden`}
+            >
+              <img
+                src={project.image}
+                alt="Project screenshot"
+                className="rounded-xl group-hover:-translate-y-2 transition-all duration-500 transform"
+              />
+            </div>
+          )}
         </div>
-      </Card>
-    </a>
+      </a>
+    </Card>
   );
 };
 
@@ -36,7 +39,7 @@ export const Card = ({ children, ...props }) => {
   return (
     <div
       {...props}
-      className="group overflow-hidden w-full h-full bg-white hover:bg-gray-100 dark:bg-[#1f1f1f] dark:hover:bg-neutral-800 dark:hover:border-neutral-700 transition-all cursor-pointer duration-300 p-10 border shadow-lg dark:shadow-md dark:border-[#313131] rounded-3xl"
+      className="group overflow-hidden bg-white hover:bg-gray-50  dark:bg-[#1f1f1f] dark:hover:bg-neutral-800 dark:hover:border-neutral-700 transition-all cursor-pointer duration-300 border shadow-lg dark:shadow-md dark:border-[#313131] rounded-3xl"
     >
       {children}
     </div>
