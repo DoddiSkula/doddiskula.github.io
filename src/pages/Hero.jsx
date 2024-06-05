@@ -49,7 +49,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="flex items-center justify-center gap-4 mb-10">
-        <div className="text-xl md:text-3xl text-gray-400 dark:text-neutral-600">
+        <div className="text-xl md:text-3xl text-gray-700 dark:text-neutral-500">
           <BsGridFill />
         </div>
         <h2 className="text-center text-gray-800 dark:text-neutral-200 font-semibold text-2xl md:text-4xl">

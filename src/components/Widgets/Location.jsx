@@ -13,14 +13,14 @@ export const LocationWidget = () => {
       <Card>
         <div className="p-10 group flex gap-8 items-center justify-between">
           <div>
-            <h3 className="transition-all font-medium text-gray-500 dark:text-neutral-500 text-xl mb-4">
+            <h3 className="transition-all font-medium text-gray-700 dark:text-neutral-500 text-xl mb-4">
               Based In
             </h3>
             <h2 className="transition-all font-semibold text-gray-800 dark:text-neutral-100 text-3xl whitespace-pre-wrap">
               Reykjavík, Iceland
             </h2>
           </div>
-          <FiMap className="shrink-0 text-gray-300 dark:text-neutral-600 text-4xl group-hover:text-indigo-400 transition-all" />
+          <FiMap className="shrink-0 text-gray-800 dark:text-neutral-500 text-4xl group-hover:text-blue-600 group-hover:dark:text-teal-400 transition-all" />
         </div>
       </Card>
     </a>
