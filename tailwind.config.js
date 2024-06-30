@@ -5,11 +5,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ['"Poppins"', "system-ui"],
+      sans: ['"Inter"', "system-ui"],
       serif: ["ui-serif", "Georgia"],
       mono: ["ui-monospace", "SFMono-Regular"],
       display: ["Lobster"],
-      body: ['"Poppins"'],
+      body: ['"Inter"'],
     },
   },
   plugins: [],

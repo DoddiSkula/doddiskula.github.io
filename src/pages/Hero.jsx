@@ -1,5 +1,4 @@
 import { FaLinkedin, FaGithub, FaDribbble, FaEnvelope } from "react-icons/fa";
-import { BsGridFill } from "react-icons/bs";
 import MemojiSmile from "assets/smile.png";
 import MemojiWink from "assets/wink.png";
 import MemojiThumbsup from "assets/thumbsup.png";
@@ -8,55 +7,43 @@ import { useState } from "react";
 import { NameWidget } from "components/Widgets/Name";
 import { SocialWidget } from "components/Widgets/Social";
 import { Projects } from "./Projects";
-import { LocationWidget } from "components/Widgets/Location";
 
 export const Hero = () => {
   const [memoji, setMemoji] = useState(MemojiSmile);
 
   return (
-    <div className="max-w-5xl mx-auto mb-10">
-      <div className="space-y-8 md:space-y-0 md:grid md:grid-rows-auto md:grid-flow-col gap-6 mb-12 md:mb-24">
+    <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col items-center gap-4">
         <div className="md:row-span-3">
-          <NameWidget emoji={memoji} onHover={() => setMemoji(MemojiSmile)} />
+          <NameWidget emoji={memoji} />
         </div>
-
-        <div className="md:col-span-2 flex gap-4 overflow-x-auto md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex gap-5">
           <SocialWidget
-            icon={<FaLinkedin />}
+            icon={<FaLinkedin className="size-5" />}
             url={
               "https://www.linkedin.com/in/%C3%BE%C3%B3r%C3%B0ur-sk%C3%BAlason/"
             }
             onHover={() => setMemoji(MemojiThumbsup)}
           />
           <SocialWidget
-            icon={<FaGithub />}
+            icon={<FaGithub className="size-5" />}
             url={"https://github.com/DoddiSkula"}
             onHover={() => setMemoji(MemojiLaptop)}
           />
           <SocialWidget
-            icon={<FaDribbble />}
+            icon={<FaDribbble className="size-5" />}
             url={"https://dribbble.com/ThordurS"}
             onHover={() => setMemoji(MemojiWink)}
           />
           <SocialWidget
-            icon={<FaEnvelope />}
+            icon={<FaEnvelope className="size-5" />}
             url={"mailto: doddiskula@gmail.com"}
             onHover={() => setMemoji(MemojiSmile)}
           />
         </div>
-        <div className="md:row-span-2 md:col-span-2">
-          <LocationWidget />
-        </div>
+        <div className="w-full border-b dark:border-neutral-800 rounded-full my-2" />
       </div>
-      <div className="flex items-center justify-center gap-4 mb-10">
-        <div className="text-xl md:text-3xl text-gray-700 dark:text-neutral-500">
-          <BsGridFill />
-        </div>
-        <h2 className="text-center text-gray-800 dark:text-neutral-200 font-semibold text-2xl md:text-4xl">
-          Project Showcase
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-5">
         <Projects />
       </div>
     </div>

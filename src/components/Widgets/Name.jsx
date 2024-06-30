@@ -1,16 +1,12 @@
-import { Card } from "components/Card";
-
-export const NameWidget = ({ emoji, onHover }) => {
+export const NameWidget = ({ emoji }) => {
   return (
-    <Card onMouseOver={onHover}>
-      <div className="group p-10">
-        <div className="transition-all bg-blue-300/60 dark:bg-neutral-800 group-hover:bg-blue-300/80 group-hover:dark:bg-neutral-700 p-2 rounded-full duration-500 w-32 cursor-pointer group-hover:scale-105 mb-5">
-          <img src={emoji} width={"100%"} alt="avatar" />
-        </div>
-        <h1 className="transition-all font-semibold text-gray-800 dark:text-gray-100 text-5xl whitespace-pre-wrap">
-          Þórður Skúlason
-        </h1>
+    <div className="flex flex-col items-center justify-center gap-4">
+      <div className="bg-gray-100 border dark:border-neutral-800 dark:bg-neutral-900 p-2 rounded-full size-20">
+        <img src={emoji} width={"100%"} alt="avatar" />
       </div>
-    </Card>
+      <h1 className="font-semibold text-gray-950 dark:text-gray-100 text-2xl">
+        Þórður Skúlason
+      </h1>
+    </div>
   );
 };
